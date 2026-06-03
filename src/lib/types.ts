@@ -7,6 +7,24 @@ export type Festival = {
 	description?: string;
 	heroImage?: string; // asset ref
 	highlights?: { title: string; text?: string }[];
+
+	// Full website content
+	intro?: string;
+	welcomeTitle?: string;
+	nightLine?: string;
+	stats?: { value: string; label: string }[];
+	areas?: { title: string; emoji?: string }[];
+	address?: string;
+	mapsUrl?: string;
+	openingHours?: string;
+	freeEntry?: boolean;
+	ticketUrl?: string;
+	ticketNote?: string;
+	partners?: { name: string }[];
+	instagram?: string;
+	tiktok?: string;
+	email?: string;
+	organizer?: string;
 };
 
 export type FestivalEvent = {

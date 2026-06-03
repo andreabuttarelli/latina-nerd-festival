@@ -47,7 +47,7 @@
 	{#if state === 'unlocked' || state === 'already'}
 		<div
 			class="pointer-events-none absolute inset-0 -z-10"
-			style="background: radial-gradient(50% 40% at 50% 35%, rgba(109,94,252,0.4), transparent 70%);"
+			style="background: radial-gradient(50% 40% at 50% 35%, rgba(149,37,145,0.08), transparent 70%);"
 		></div>
 	{/if}
 
@@ -68,13 +68,13 @@
 		</p>
 	{:else}
 		<!-- unlocked / already -->
-		<div class="animate-pop flex h-28 w-28 items-center justify-center rounded-[2rem] bg-accent/15 text-6xl">
+		<div class="animate-pop flex h-28 w-28 items-center justify-center rounded-[6px] bg-accent/10 text-6xl">
 			{m?.emoji ?? '🎯'}
 		</div>
-		<p class="animate-fade-up mt-6 text-sm font-semibold uppercase tracking-widest text-accent-soft" style="animation-delay:120ms">
+		<p class="animate-fade-up mt-6 text-sm font-semibold uppercase tracking-[0.15em] text-accent" style="animation-delay:120ms">
 			{state === 'already' ? 'Già sbloccata' : 'Achievement sbloccato'}
 		</p>
-		<h1 class="animate-fade-up mt-2 text-3xl font-bold tracking-tight text-balance" style="animation-delay:180ms">
+		<h1 class="animate-fade-up mt-2 text-3xl font-bold uppercase tracking-tight text-balance" style="animation-delay:180ms">
 			{m?.achievementTitle ?? m?.title}
 		</h1>
 		{#if m?.achievementDescription}
@@ -83,7 +83,7 @@
 			</p>
 		{/if}
 		{#if m?.points}
-			<p class="animate-fade-up mt-4 text-sm font-semibold text-accent-soft" style="animation-delay:280ms">
+			<p class="animate-fade-up mt-4 text-sm font-semibold text-accent" style="animation-delay:280ms">
 				+{m.points} punti
 			</p>
 		{/if}
@@ -92,13 +92,13 @@
 	<div class="mt-10 flex w-full max-w-xs flex-col gap-2">
 		<a
 			href="/app/missioni"
-			class="rounded-2xl bg-accent px-6 py-3.5 text-base font-semibold text-white transition active:scale-[0.98]"
+			class="rounded-[3px] bg-accent px-6 py-3.5 text-base font-semibold text-white transition active:opacity-80"
 		>
 			Le mie missioni
 		</a>
 		<a
 			href="/app/scan"
-			class="rounded-2xl border border-hairline px-6 py-3.5 text-base font-medium text-ink-dim transition active:scale-[0.98]"
+			class="rounded-[3px] border border-line px-6 py-3.5 text-base font-medium text-ink transition active:opacity-80"
 		>
 			Scansiona ancora
 		</a>

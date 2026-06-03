@@ -71,13 +71,13 @@
 <svelte:head><title>Scansiona · Latina Nerd Festival</title></svelte:head>
 
 <header class="safe-top px-5 pb-2 pt-2">
-	<h1 class="text-2xl font-bold tracking-tight">Scansiona</h1>
+	<h1 class="text-3xl font-bold uppercase tracking-tight">Scansiona</h1>
 	<p class="mt-0.5 text-sm text-ink-dim">Inquadra un QR del festival per sbloccare una missione.</p>
 </header>
 
 <div class="px-5 pt-3">
 	<div
-		class="relative aspect-square w-full overflow-hidden rounded-[1.5rem] border border-hairline bg-black"
+		class="relative aspect-square w-full overflow-hidden rounded-[4px] border border-line bg-surface"
 	>
 		<!-- svelte-ignore a11y_media_has_caption -->
 		<video bind:this={video} class="h-full w-full object-cover" playsinline muted></video>
@@ -94,7 +94,7 @@
 				Avvio fotocamera…
 			</div>
 		{:else if status === 'navigating'}
-			<div class="absolute inset-0 flex items-center justify-center bg-black/60 text-sm font-medium text-ink">
+			<div class="absolute inset-0 flex items-center justify-center bg-ink/70 text-sm font-medium text-white">
 				QR rilevato ✓
 			</div>
 		{:else if status === 'denied' || status === 'unsupported'}

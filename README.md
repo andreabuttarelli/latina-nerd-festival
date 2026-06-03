@@ -2,7 +2,11 @@
 
 Web app mobile-first per il Latina Nerd Festival. SvelteKit + TailwindCSS, back-end Sanity.
 
-- **Homepage** (`/`) — landing minimal con date, tagline e CTA verso l'app.
+- **Homepage / sito** (`/`) — sito vetrina completo del festival: hero, benvenuto,
+  aree tematiche, teaser programma, info & come arrivare, biglietti (Eventbrite),
+  partner, footer con social. Tutti i contenuti editabili da Sanity (`festival`).
+- **Onboarding** (`/onboarding`) — 3 slide mostrate al primo ingresso in `/app`
+  (flag in localStorage, con "Salta"). Spiega programma, scan QR e missioni.
 - **App** (`/app`) con bottom-nav:
   - **Programma** (`/app/programma`) — cronoprogramma su 2 giorni, scroll verticale,
     si posiziona in automatico sul giorno corrente, evidenzia gli eventi "Live".

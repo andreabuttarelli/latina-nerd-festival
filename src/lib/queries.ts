@@ -5,7 +5,14 @@ export const festivalQuery = /* groq */ `
   name, tagline, location, description,
   "startDate": startDate, "endDate": endDate,
   "heroImage": heroImage.asset._ref,
-  highlights[]{ title, text }
+  highlights[]{ title, text },
+  intro, welcomeTitle, nightLine,
+  stats[]{ value, label },
+  areas[]{ title, emoji },
+  address, mapsUrl, openingHours, freeEntry,
+  ticketUrl, ticketNote,
+  partners[]{ name },
+  instagram, tiktok, email, organizer
 }`;
 
 export const eventsQuery = /* groq */ `

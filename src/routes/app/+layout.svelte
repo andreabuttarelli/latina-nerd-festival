@@ -1,7 +1,15 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
 	import { page } from '$app/state';
+	import { hasOnboarded } from '$lib/user';
 
 	let { children } = $props();
+
+	// First visit → show onboarding before entering the app.
+	onMount(() => {
+		if (!hasOnboarded()) goto('/onboarding', { replaceState: true });
+	});
 
 	const tabs = [
 		{
@@ -31,7 +39,7 @@
 
 	<!-- Bottom tab bar -->
 	<nav
-		class="safe-bottom fixed inset-x-0 bottom-0 z-40 mx-auto max-w-md border-t border-hairline bg-base/80 px-2 pt-2 backdrop-blur-xl"
+		class="safe-bottom fixed inset-x-0 bottom-0 z-40 mx-auto max-w-md border-t border-line bg-base/90 px-2 pt-2 backdrop-blur-xl"
 	>
 		<ul class="flex items-stretch justify-around">
 			{#each tabs as t}
@@ -40,8 +48,8 @@
 					<a
 						href={t.href}
 						aria-current={isActive ? 'page' : undefined}
-						class="flex flex-col items-center gap-1 rounded-xl py-1.5 transition active:scale-95
-							{isActive ? 'text-accent-soft' : 'text-ink-faint'}"
+						class="flex flex-col items-center gap-1 py-1.5 transition active:scale-95
+							{isActive ? 'text-accent' : 'text-ink-faint'}"
 					>
 						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
 							<path
