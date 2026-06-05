@@ -6,7 +6,7 @@ import { schemaTypes } from './schemaTypes';
 export default defineConfig({
 	name: 'latina-nerd-festival',
 	title: 'Latina Nerd Festival',
-	projectId: process.env.SANITY_STUDIO_PROJECT_ID || 'placeholder',
+	projectId: process.env.SANITY_STUDIO_PROJECT_ID || 'rj3wuxq5',
 	dataset: process.env.SANITY_STUDIO_DATASET || 'production',
 	plugins: [structureTool(), visionTool()],
 	schema: { types: schemaTypes }
